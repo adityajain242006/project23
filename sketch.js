@@ -35,7 +35,7 @@ function setup() {
 
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0, isStatic:true});
 	World.add(world, packageBody);
-	packageCover = Bodies.rectangle(400,640, 20,200 , {restitution:0, isStatic:true});
+	packageCover = Bodies.rectangle(400,640, 200,30 , {restitution:0, isStatic:true});
 
 	World.add(world, packageCover);
 	packageCover2 = Bodies.rectangle(310,580, 20,100 , {restitution:0, isStatic:true});
@@ -59,13 +59,13 @@ function draw() {
   background(0);
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y
-  rect(ground.position.x,ground.position.y,width,10);
-  rect(packageCover.position.x,packageCover.position.y,200,20);
+  
+  drawSprites();
+ rect(ground.position.x,ground.position.y,width,10);
+  rect(packageCover.position.x,packageCover.position.y,200,30);
   rect(packageCover2.position.x,packageCover2.position.y,20,100);
   rect(packageCover3.position.x,packageCover3.position.y,20,100);
   
-  drawSprites();
- 
 }
 
 function keyPressed() {
